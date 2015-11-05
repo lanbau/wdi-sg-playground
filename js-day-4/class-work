@@ -1,0 +1,46 @@
+var q1 = [image1.png, image2.png, image3.png]
+VM6911:2 Uncaught ReferenceError: image1 is not defined(…)(anonymous function) @ VM6911:2InjectedScript._evaluateOn @ VM6792:875InjectedScript._evaluateAndWrap @ VM6792:808InjectedScript.evaluate @ VM6792:664
+var q1 = ['image1.png', 'image2.png', 'image3.png']
+undefined
+q1
+["image1.png", "image2.png", "image3.png"]
+q2 = q1[0]
+"image1.png"
+q2
+"image1.png"
+q3 = q1.length
+3
+q4 = q1[q1.length - 1]
+"image3.png"
+
+q1.forEach(function(word){console.log(word+1)})
+
+q2.reduce(function(a, b) {
+  return a + b;
+});
+14
+var q4 = q2.reduce(function(a, b) {
+  return a + b;
+});
+undefined
+q4
+14
+q4/q2.length
+3.5
+
+
+---Solutions---
+
+function incrementByOne (number) {
+  return number + 1
+}
+
+var q2 = q1.map(incrementByOne)
+
+
+var q5 = q1.map(function(x) { return x*2})
+undefined
+q5
+[2, 4, 6, 8]
+q1
+[1, 2, 3, 4]
